@@ -2,7 +2,7 @@
 
 Yes, even though it might sound strange, C is a high level programing language. Most people consider it a low level one because of 
 its complexity compared to other languages such us Python or JavaScript. This is not only incorrect, but we can even cosider C the 
-father of the most popular high level languages
+father of the most popular high level languages.
 
 To start this module, we will be introducing the fundamentals of any typed programming language: the variables and their different 
 types. First of all, we can consider a variable like a small box. in this box we will store some information that we have the 
@@ -34,13 +34,13 @@ But not only letters, special characters too
 char hastag = '#';
 char at = '@';
 ```
-and even in some cases, we can store numbers as characters, in this scenario, those numbers will not have a real numeric value, they
+And even in some cases, we can store numbers as characters, in this scenario, those numbers will not have a real numeric value, they
 will have the same behaviour as other characters.
 ``` C
 char number_one = '1';
 char number_nine = '9';
 ```
-to better understand this last part, we can see an example in one of the exercises, but here i will illustrate it with the
+To better understand this last part, we can see an example in one of the exercises, but here i will illustrate it with the
 real output
 ``` C
 char number_one = '1';
@@ -59,4 +59,8 @@ with `'#'` or `4` with `10`
 ## Boolean type: `bool`
 
 Boolean type is a very special piece in the programming world. As we know, computers are constantly working with 1 and 0, which 
-is a binary system
+is a binary system. `bool` only have two values: `true` and `false`. This type of variable is mostly used as a conditional tester.
+``` C
+bool is_alive = true;
+```
+
