@@ -1,13 +1,13 @@
-# C, a high-level programming language
+# C: A foundational programming language
 
 Yes, even though it might sound strange, C is a high level programing language. Most people consider it a low level one because of 
-its complexity compared to other languages such us Python or JavaScript. This is not only incorrect, but we can even cosider C the 
+its complexity compared to other languages such as Python or JavaScript. This is not only incorrect, but we can even cosider C the 
 father of the most popular high level languages.
 
 ## Variables and types
 
 To start this module, we will be introducing the fundamentals of any typed programming language: the variables and their different 
-types. First of all, we can consider a variable like a small box. in this box we will store some information that we have the 
+types. First of all, we can consider a variable like a small box. In this box we will store some information that we have the 
 intention to use in the future. 
 
 ### Numeric types: `int`, `float` and `double`
@@ -65,6 +65,7 @@ is a binary system. `bool` only have two values: `true` and `false`. This type o
 ``` C
 bool is_alive = true;
 ```
+Note: `bool` is available in C starting from the C99 standard, and requires including `<stdbool.h>`.
 
 ## Arrays
 
@@ -109,7 +110,11 @@ string_2[3] = 'l';
 string_2[4] = 'o';
 string_2[5] = '!';
 ```
-we can also simulate a type `String` by creating a two-dimensional array of `char` type:
+We can simulate a `String` by just writing the entire word between `""`
+``` C
+char string[6] = "Hello!";
+```
+we can also simulate multiple values of a type `String` by creating a two-dimensional array of `char` type:
 ``` C
 char array[3][10] = {"Hello", "world!", ":)"}; 
 ```
