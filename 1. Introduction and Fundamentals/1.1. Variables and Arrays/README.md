@@ -158,11 +158,55 @@ printf("Value: %d\n", num_2);
 [Output line 4] Value: 99
 [Output line 5] Value: 97
 ```
+#### mixing types
+Finally, we cant mix `int` types with `double` and `float` ones, the second and third type can still store an integer value if needed, but we cant store decimal values in the first one, doint it would lose decimal data in the process.
+``` C
+int num_1 = 2;
+float num_2 = 3.5;
+printf("Value: %d\n", num_1);
+num_1 = num_1 + num_2;          //overwrite num_1
+printf("Value: %d\n", num_1);
+printf("Value: %d\n", num_2);
+```
+``` yaml
+[Output line 2] Value: 2
+[Output line 4] Value: 5
+[Output line 5] Value: 3.5
+```
+here we lost the 0.5 because we stored 5.5 in an `int` type, meaning we lost information. 
+
 ### === `substract` === 
+To substract values, we can do it the same way as when we add them, we just need the operator `-`
+``` C
+int num_1 = 2, num_2 = 3;
+printf("Value: %d\n", num_1);
+num_1 = num_2 - num_1;          //overwrite num_1
+printf("Value: %d\n", num_1);
+printf("Value: %d\n", num_2);
+```
+``` yaml
+[Output line 2] Value: 2
+[Output line 4] Value: 1
+[Output line 5] Value: 3
+```
 
 ### === `multiply` ===
+To multiply values, we can do it the same way as when we add them, we just need the operator `*`
+``` C
+int num_1 = 2, num_2 = 3;
+printf("Value: %d\n", num_1);
+num_1 = num_2 * num_1;          //overwrite num_1
+printf("Value: %d\n", num_1);
+printf("Value: %d\n", num_2);
+```
+``` yaml
+[Output line 2] Value: 2
+[Output line 4] Value: 6
+[Output line 5] Value: 3
+```
 
 ### === `divide` ===
+in this situation we have a problem. Going back to [mixing types](####mixing-types) we must know that dividing integer numbers can give us decimal values, so it is important to store the value in a `float` or `double` variable.
 
 ## Making a basic program
 
