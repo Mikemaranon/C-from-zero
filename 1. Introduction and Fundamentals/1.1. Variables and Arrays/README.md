@@ -95,6 +95,7 @@ Both ways are totally valid but used for different purposes, so is necessary to 
 ### character (Strings)
 
 to store a complete word such as `"hello!"` we need to create an array, as `char` types can only store an individual value. In other languages such as Java this is called a `String`, but in C we dont have this type.  
+
 The syntax used is very similar to the one used in the definition of numeric arrays:
 ``` C
 char string[6] = {'H', 'e', 'l', 'l', 'o', '!'};
@@ -131,6 +132,7 @@ The finality of a program is to manipulate variables to get different results. t
 
 ### === `add` ===
 we all know that in order to add two numbers we need the symbol `+`. In C we can add two variables using it, the process of adding values can be in the same variable overwriting the value it stores or writing the result in another variable.  
+
 lets see an example:
 ``` C
 int num_1 = 2, num_2 = 3;
@@ -206,7 +208,19 @@ printf("Value: %d\n", num_2);
 ```
 
 ### === `divide` ===
-in this situation we have a problem. Going back to [mixing types](####mixing-types) we must know that dividing integer numbers can give us decimal values, so it is important to store the value in a `float` or `double` variable.
+in this situation we have a problem. Going back to [mixing types](####mixing-types) we must know that dividing integer numbers can give us decimal values, so it is important to store the value in a `float` or `double` variable.  
+
+We also need to convert the `int` variables into `double` or `float` in the operation by writing `(double)` or `(float)` right before.  
+
+To divide values, we need the operator `/`
+``` C
+int num_1 = 2, num_2 = 3;
+double result = (double)num_2 / num_1;          
+printf("Value: %.1f\n", result);
+```
+``` yaml
+[Output line 3] Value: 1.5
+```
 
 ## Making a basic program
 
@@ -221,4 +235,46 @@ int main() {
 }
 ```
 
-if we want to work with variables to make a basic calculator to add two numbers, we have to insert the code
+if we want to work with variables to make a basic calculator to add two numbers, we have to insert the code in the `//code` comment
+
+to print messages through the terminal we will use the in-made function `printf()` and to read an input from the user we will use `scanf()` using the following structure: ` scanf("%var", &variable)`  
+
+Here is a list of the different `%var` values depending on the variable:
+| Format Specifier | Variable Type            | Description                                                      |
+|------------------|--------------------------|------------------------------------------------------------------|
+| `%d`             | `int`                    | Reads a signed decimal integer.                                  |
+| `%u`             | `unsigned int`           | Reads an unsigned decimal integer.                               |
+| `%f`             | `float`                  | Reads a floating-point number (single precision).                |
+| `%lf`            | `double`                 | Reads a floating-point number (double precision).                |
+| `%c`             | `char`                   | Reads a single character.                                        |
+| `%s`             | `char[]` (string)        | Reads a string (a sequence of characters until whitespace).      |
+| `%x`             | `int`                    | Reads a hexadecimal integer (lowercase letters).                 |
+| `%X`             | `int`                    | Reads a hexadecimal integer (uppercase letters).                 |
+| `%o`             | `int`                    | Reads an octal integer.                                          |
+| `%ld`            | `long int`               | Reads a long integer (signed).                                   |
+| `%lld`           | `long long int`          | Reads a long long integer (signed).                              |
+| `%lf`            | `double`                 | Reads a floating-point number in double precision.               |
+| `%p`             | `void *`                 | Reads a pointer (memory address).                                |
+| `%u`             | `unsigned int`           | Reads an unsigned integer.                                       |
+| `%lf`            | `long double`            | Reads a long double (extended precision floating point).         |
+  
+``` C
+#include <stdio.h>
+
+int main() {
+    int num_1, num_2;
+    
+    printf("Enter two integers: ");
+
+    // Read two integers from user input
+    scanf("%d %d", &num_1, &num_2);
+    
+    // Print the values entered by the user
+    printf("You entered: %d and %d\n", num_1, num_2);
+    
+    int sum = num_1 + num_2;
+    printf("The sum of %d and %d is: %d\n", num_1, num_2, sum);
+    
+    return 0;
+}
+```

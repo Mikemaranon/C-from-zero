@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Mike/Desktop/Codes/Projects/C-from-zero/1. Introduction and Fundamentals/1.1. Variables and Arrays",
-      "program": "c:/Users/Mike/Desktop/Codes/Projects/C-from-zero/1. Introduction and Fundamentals/1.1. Variables and Arrays/build/Debug/outDebug",
+      "cwd": "c:/Users/Mike/Desktop/Codes/Projects/C-from-zero/1. Introduction and Fundamentals/1.1. Variables and Arrays/examples",
+      "program": "c:/Users/Mike/Desktop/Codes/Projects/C-from-zero/1. Introduction and Fundamentals/1.1. Variables and Arrays/examples/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
