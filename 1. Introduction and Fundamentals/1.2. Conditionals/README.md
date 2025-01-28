@@ -95,6 +95,27 @@ This example checks if a number is positive using an `if-else` statement and the
 
 Logical operators are used to combine multiple conditions. The main logical operators in C are:
 
+## Equality Operator (`==`)
+
+The equality operator `==` is used to compare two values to check if they are equal. It returns `true` if the values are equal and `false` otherwise. This operator is commonly used in conditional statements.
+
+```c
+#include <stdio.h>
+
+int main() {
+    int a = 5;
+    int b = 5;
+
+    if (a == b) {
+        printf("a and b are equal.\n");
+    } else {
+        printf("a and b are not equal.\n");
+    }
+
+    return 0;
+}
+```
+
 ### AND Operator (`&&`)
 
 The `&&` operator returns `true` if both conditions are true.
